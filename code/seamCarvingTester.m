@@ -27,7 +27,7 @@ image_scaling_width = imresize(image, [sz(1), floor(sz(2)/2)]);
 figure
 imshow(image_scaling_width)
 
-% apply cropping 
+% apply cropping
 image_crop_width = imcrop(image, [1, 1, floor(sz(2)/2), sz(1)]);
 figure
 imshow(image_crop_width)
