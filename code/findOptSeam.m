@@ -27,13 +27,7 @@ function [optSeamMask, seamEnergy] = findOptSeam(energy)
     
     for i = 2:sz(1)
         for j = 2:sz(2)-1
-%             if (j>1) && (j<sz(2))
             M(i, j) = energy(i, j-1) + min(M(i - 1, (j - 1):(j + 1)));
-%             elseif (j==1)
-%                 M(i, j) = energy(i, j) + min(M(i - 1, (j):(j + 1)));
-%             elseif (j==sz(2))
-%                 M(i, j) = energy(i, j) + min(M(i - 1, (j - 1):(j)));        
-%             end
         end
     end
     
